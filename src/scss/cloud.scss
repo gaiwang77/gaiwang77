@@ -8,5 +8,70 @@
 a{
     color: inherit;
     text-decoration: none;
+    width: 100%;
+    overflow: hidden;
 }
-.cloud
+.cloud{
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 150px;
+    border-radius: 150px;
+    top: 200px;
+    left: 200px;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: inherit;
+        border-radius: 150px;
+        width: 150px;
+        height: 150px;
+        top: -50px;
+        left: 70px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        background-color:inherit;
+        border-radius: 200px;
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        left: 220px;
+    }
+    &.c2{
+        top: 500px;
+        left: 600px;
+        transform: scale(0.8) rotateY(180deg);
+        animation-duration: 4s;
+    }
+    &.c3{
+        top: 700px;
+        left: 300px;
+        transform: scale(0.5);
+        animation-duration: 3s;
+    }
+}
+ul {
+    list-style-type: none;
+  }
+  
+  body {
+    background-color: #4898da;
+  }
+
+  
+  @keyframes move {
+    0% {
+      left: -500px;
+      background: #fff;
+    }
+    100% {
+      left: 100%;
+      background: #000;
+    }
+    }
