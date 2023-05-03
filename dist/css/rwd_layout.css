@@ -38,10 +38,17 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  position: relative;
   height: 100px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+.header .header-content .logo {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  padding-left: 20px;
+  z-index: 99;
 }
 .header .header-content .hambger {
   display: flex;
@@ -72,6 +79,17 @@ html {
 .header .header-content .menu ul {
   list-style-type: none;
   display: flex;
+  position: absolute;
+  background: #fff;
+  top: -500px;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: 0.3s;
 }
 .header .header-content .menu ul li {
   text-align: center;
@@ -81,6 +99,10 @@ html {
 }
 .header .header-content .menu ul li:hover {
   color: rgb(47, 47, 248);
+}
+
+.header .header-content .menu ul .header .header-content .menu ul li:nth-child(3) {
+  margin-right: 0;
 }
 
 .header .header-content .menu ul .header .header-content .menu ul li:last-child {
@@ -286,21 +308,28 @@ html {
   .header .header-content .hambger {
     display: flex;
   }
+  .header .header-content #hambger-box:checked ~ .logo {
+    width: 30%;
+    height: 30%;
+  }
   .header .header-content #hambger-box:checked ~ .menu {
     display: block;
   }
-  .header .header-content #hambger-box:checked ~ .mobile-switch > span {
+  .header .header-content #hambger-box:checked ~ .menu li {
+    font-size: 15px;
+  }
+  .header .header-content #hambger-box:checked ~ .hambger > span {
     background: rgb(255, 57, 42);
   }
-  .header .header-content #hambger-box:checked ~ .mobile-switch > span:first-child {
+  .header .header-content #hambger-box:checked ~ .hambger > span:first-child {
     position: relative;
     transform: rotate(45deg);
     top: 5px;
   }
-  .header .header-content #hambger-box:checked ~ .mobile-switch > span:nth-child(2) {
+  .header .header-content #hambger-box:checked ~ .hambger > span:nth-child(2) {
     display: none;
   }
-  .header .header-content #hambger-box:checked ~ .mobile-switch > span:last-child {
+  .header .header-content #hambger-box:checked ~ .hambger > span:last-child {
     position: relative;
     transform: rotate(-45deg);
     top: -5px;

@@ -1,9 +1,19 @@
 @media screen and (max-width: 800px) {
+  .header .header-content {
+    position: relative;
+  }
   .header .header-content .hambger {
     display: flex;
   }
+  .header .header-content #hambger-box:checked ~ .logo {
+    width: 30%;
+    height: 30%;
+  }
   .header .header-content #hambger-box:checked ~ .menu {
     display: block;
+  }
+  .header .header-content #hambger-box:checked ~ .menu li {
+    font-size: 15px;
   }
   .header .header-content #hambger-box:checked ~ .hambger > span {
     background: rgb(255, 57, 42);

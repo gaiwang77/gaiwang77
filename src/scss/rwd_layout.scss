@@ -38,10 +38,19 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        position: relative;
+
         height: 100px;
         border-bottom-right-radius: 8px;
         border-bottom-left-radius: 8px;
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            padding-left: 20px;
+            z-index: 99;
+        }
 
 
         .hambger {
@@ -85,6 +94,17 @@ html {
         .menu ul {
             list-style-type: none;
             display: flex;
+            position: absolute;
+            background: #fff;
+            top: -500px;
+            width: 100%;
+            left: 0;
+            opacity: 0;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            transition: 0.3s;
 
             li {
                 text-align: center;
@@ -104,6 +124,9 @@ html {
 
 
 
+.header .header-content .menu ul .header .header-content .menu ul li:nth-child(3) {
+    margin-right: 0;
+}
 
 .header .header-content .menu ul .header .header-content .menu ul li:last-child {
     margin-right: 0;
