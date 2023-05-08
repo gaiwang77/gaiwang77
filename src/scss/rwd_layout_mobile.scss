@@ -2,6 +2,7 @@
     .header {
         .header-content {
             position: relative;
+
             .hambger {
                 display: flex;
 
@@ -15,12 +16,19 @@
                         height: 30%;
 
                     }
+
                     ~.menu {
-                        display: block;
-                        li{
+                        top: 90px;
+                        opacity: 1;
+                        ul {
+                            top:0;
+                            opacity: 1;
+                        }
+
+                        li {
                             font-size: 15px;
 
-                        }                
+                        }
                     }
 
                     ~.hambger {
@@ -47,8 +55,108 @@
                 }
             }
 
+          
+
             .menu {
-                display: none;
+                position: absolute;
+                background: #fff;
+                top: -500px;
+                width: 100%;
+                left: 0;
+                opacity: 0;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                transition: 0.3s;
+
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .join-form {
+
+                // .join-form::before
+               
+        
+                .join-form-wrap {
+                    height: unset;
+                    align-items: flex-start;
+                    padding-top: 120px;
+                    .join-form-content {
+                        flex-direction: column;
+                        background: transparent;
+        
+                        >div {
+                            width: 100%;
+                            height: 300px;
+                            background: rgb(5, 47, 138);
+                        }
+        
+                        .join-form-left-side {
+        
+        
+                            // .join-form-left-side::before
+                            &::before {
+                                right: unset;
+                                top: unset;
+                                bottom: 0;
+                                left: 0;
+                                height: 3px;
+                                width: calc(100% - 60px);
+                                margin-left: 30px;
+                                border-left-width: 0;
+                                border-bottom: 3px dashed #fff;
+                            }
+                        }
+        
+                        .text-content {
+        
+        
+                            .text-more {}
+                        }
+        
+                        #text-more-box {
+        
+        
+                            &:checked {
+                                ~.text-content {
+        
+        
+        
+                                    .text-more {}
+                                }
+                            }
+                        }
+        
+                        .form-control {
+        
+        
+                            input {}
+                        }
+        
+                        .join-form-submit {}
+                    }
+                }
+            }
+            .flow {
+                .item {
+                    justify-content: flex-start;
+                    padding-left: 5px;
+        
+                    &::before {
+                        left: 18px;
+                    }
+                }
             }
 
         }
