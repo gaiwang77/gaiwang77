@@ -157,74 +157,120 @@ html {
     background-image: url(/icons/images/banner.jpeg);
     background-size: cover;
     position: relative;
-}
 
-.join-form::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.356);
-}
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.356);
+    }
 
-.join-form .join-form-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+    .join-form-wrap {
+        height: unset;
+        align-items: flex-start;
+        padding-top: 120px;
 
-.join-form .join-form-wrap .join-form-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(5, 47, 138);
-    color: #fff;
-    height: 350px;
-}
+        .join-form-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(5, 47, 138);
+            color: #fff;
+            height: 350px;
+            flex-direction: column;
+            background: transparent;
 
-.join-form .join-form-wrap .join-form-content>div {
-    width: 50%;
-    padding: 30px;
-}
+            >div {
 
-.join-form .join-form-wrap .join-form-content .join-form-left-side {
-    position: relative;
-}
+                width: 100%;
+                height: 300px;
+                background: rgb(5, 47, 138);
+            }
 
-.join-form .join-form-wrap .join-form-content .join-form-left-side::before {
-    content: "";
-    position: absolute;
-    border-left: 3px dashed #fff;
-    height: calc(100% - 60px);
-    right: 0;
-    top: 30px;
-}
+            .join-form-left-side {
+                position: relative;
 
-.join-form .join-form-wrap .join-form-content .text-content {
-    line-height: 30px;
-    text-align: justify;
-}
+                &::before {
+                    right: unset;
+                    top: unset;
+                    bottom: 0;
+                    left: 0;
+                    height: 3px;
+                    width: calc(100% - 60px);
+                    margin-left: 30px;
+                    border-left-width: 0;
+                    border-bottom: 3px dashed #fff;
+                }
 
-.join-form .join-form-wrap .join-form-content .form-control {
-    margin-bottom: 15px;
-}
+            }
 
-.join-form .join-form-wrap .join-form-content .form-control input {
-    width: 100%;
-    height: 40px;
-    border: 0;
-    outline: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 20px;
-    border-radius: 4px;
-}
+            #text-more-box {
+                display: none;
 
-.join-form .join-form-wrap .join-form-content .join-form-submit {
-    text-align: right;
+                &:checked {
+                    ~.text-content {
+                        overflow: auto;
+
+
+                        .text-more {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .text-content {
+                line-height: 30px;
+                text-align: justify;
+                overflow: hidden;
+                height: 75%;
+                position: relative;
+
+                .text-more {
+                    position: absolute;
+                    width: 100%;
+                    height: 40px;
+                    background: rgb(255, 255, 255);
+                    color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 0;
+                    bottom: 0;
+                    cursor: pointer;
+                }
+
+
+
+                .form-control {
+                    margin-bottom: 30px;
+                    padding: 30px;
+
+                    &input {
+                        width: 100%;
+                        height: 40px;
+                        border: 0;
+                        outline: none;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        font-size: 20px;
+                        border-radius: 4px;
+                    }
+                }
+
+                .join-form-submit {
+                    text-align: right;
+                }
+
+
+            }
+
+        }
+    }
+
 }
 
 .button {
@@ -239,11 +285,13 @@ html {
 .button.primary {
     background: #1042cc;
     color: #fff;
+
+    &:hover {
+        background: #285ef3;
+    }
 }
 
-.button.primary:hover {
-    background: #285ef3;
-}
+
 
 .slogan {
     font-size: 30px;
@@ -251,18 +299,20 @@ html {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 15px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 140px);
+        width: 0;
+        height: 3px;
+        border-left: solid 100px #1072c2;
+        border-right: solid 180px #fff;
+    }
+
 }
 
-.slogan::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 140px);
-    width: 0;
-    height: 3px;
-    border-left: solid 100px #1072c2;
-    border-right: solid 180px #fff;
-}
 
 .courses {
     min-height: 100vh;
@@ -290,20 +340,19 @@ html {
     z-index: 2;
 
     .item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
+
+        justify-content: flex-start;
+        padding-left: 5px;
     }
 
-    .item::before {
-        content: "";
+    &::before {
+        left: 18px;
+        /*content: "";
         position: absolute;
         height: 100%;
         width: 0;
         top: 0;
-        border-left: 4px dashed #fff;
+        border-left: 4px dashed #fff;*/
     }
 
     .circle {
