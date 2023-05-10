@@ -8,9 +8,52 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
+    
     <h1>my heelo</h1>
     <div class="container">
-        <h1>product</h1>
+        <h1>聯絡表單</h1>
+        
+    <form action="">
+        <div class="mb-3">
+            <label for="contact-name" class="form-label"> name</label>
+            <input type="text" name="name" class="form-control" id="contact-name">
+        </div>
+        <div class="mb-3">
+            <label for="contact-phone" class="form-label">Phone</label>
+            <input type="text" name="phone" class="form-control" id="contact-phone">
+        </div>
+        <div class="mb-3">
+            <label for="contact-adress" class="form-label">Adress</label>
+            <input type="text" name="adress" class="form-control" id="contact-adress">
+        </div>
+        <div class="mb-3">
+           <label for="contact-mail" class="form-label">Mail</label>
+           <div class="input-group">
+           <input type="text" name="mail" class="form-control" id="contact-mail">
+           <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="contact-type" class="form-label">Type</label>
+            <select  name="type" class="form-control" id="contact-type">
+                <option value="">Chosing</option>
+                <option value="1">baketball</option>
+                <option value="2">baseball</option>
+                <option value="3">table tennis</option>
+            </select>   
+        </div>
+        <div class="mb-3">
+            <label for="contact-other" class="form-label">Others</label>
+            <textarea  name="other" class="form-control" id="contact-other"></textarea>
+        </div>
+        <div class="mb-3 text-end">
+            <button class="btn btn-primary">SEND</button>
+        </div>
+
+    </form>
+
+
+        <!-- <h1>product</h1>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-2">
                 <div class="product-item border">
@@ -64,13 +107,13 @@
                             <h2>DOG</h2>
                         </div>
                         <div class="text-center m-2">
-                            <!-- https://getbootstrap.com/docs/5.3/components/buttons/ -->
-                            <button class="btn btn-secondary">立即購買</button>
+                            https://getbootstrap.com/docs/5.3/components/buttons/ -->
+                            <!-- <button class="btn btn-secondary">立即購買</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- https://github.com/davidworker/frontend20230320  -->
 </body>

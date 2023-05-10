@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="bg-dark p-5">
+            <div class="p-5">
+                <h1 class="text-light text-center">login</h1>
+                <hr class="text-light">
+                <div class="mb-3">
+                    <label for="contact-account" class="form-label text-light">Account</label>
+                    <input type="text" name="account" class="form-control" id="contact-account">
+                </div>
+                <div class="mb-3">
+                    <label for="contact-password" class="form-label text-light ms-1">Password</label>
+                    <input type="text" name="password" class="form-control" id="contact-password">
+                </div>
+                <div class="text-end ">
+                <div class="form-check mb-3 d-flex justify-content-center ">
+                    <input type="checkbox" name="forget"  id="contact-forget" class="form-check-input"> 
+                    <label for="contact-forget" class="form-check-label text-light ms-1">記住密碼</label>
+                </div>
+            </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">LOG IN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Success!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Waiting for 3 days
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+<script src="js/bootstrap.min.js"></script>
+
+
+</html>
