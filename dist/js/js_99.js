@@ -29,11 +29,15 @@ const genTable = () => {
         return;
     }
 
+
     // 抓取 table 的 DOM
     let table = document.querySelector('#table');
     let thead = table.querySelector('thead');
     let tbody = table.querySelector('tbody');
 
+    thead.innerHTML = '';
+    tbody.innerHTML = '';
+    
     // 初始化 thead UI
     // HTML 內容初始化
     let theadHTML = '<tr><th></th>';
