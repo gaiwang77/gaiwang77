@@ -16,6 +16,3 @@ const sayHi = ()=>{
 }
 
 let hi = document.querySelector('#hi');
-
-hi.addEventListener('click', sayHi);
-
