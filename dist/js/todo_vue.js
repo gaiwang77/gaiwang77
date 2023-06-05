@@ -1,9 +1,14 @@
 const database = {
     set(key, value) {
+        value = JSON.stringify(value);
         localStorage.setItem(key, value);
     },
     get(key) {
-        return localStorage.getItem(key);
+        let value = localStorage.getItem(key);
+        if (value) {
+            value = JSON.parse(value);
+        }
+        return value;
     },
     remove(key) {
         localStorage.removeItem(key);
