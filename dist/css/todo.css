@@ -100,8 +100,7 @@ ul {
 .todo-list > ul li:hover {
   background-color: #cf4545;
 }
-
-.x {
+.todo-list > ul li i {
   position: absolute;
   display: inline-flex;
   right: 0;
@@ -114,8 +113,9 @@ ul {
   font-size: 26px;
   font-weight: 700;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  z-index: 2;
 }
-.x:hover {
+.todo-list > ul li i:hover {
   color: #cfcfcf;
 }
 
