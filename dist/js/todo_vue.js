@@ -22,6 +22,20 @@ let vm = Vue.createApp({
                 return;
             }
             this.pending.push(value);
+            this.itemValue = '';
+            this.$refs.itemValue.focus();
+        },
+        toDone(index) {
+           let value = this.pending[index];
+           this.done.push(value);
+           this.pending.splice(index, 1);
+        },
+        toPending(index) {
+            let value = this.done[index];
+            this.pending.push(value);
+            
+            this.done.splice(index, 1);
         }
+
     }
 }).mount('#app');

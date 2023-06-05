@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>todo list</title>
     <link rel="stylesheet" href="css/todo.css">
 </head>
+
 <body>
-    <div id="app">
-    <div class="container">
-        <h1 class="slogan">Todo list</h1>
-        <div class="join">
-           <label for="item-name">代辦項目</label>
-           <input type="text" id="item-name" v-model="itemValue" ref="itemValue"  @keyup.enter="doAddItem">
-           <button id="add-btn" @click="doAddItem">加入</button>
-        </div>
-        <div class="check">
-            <div class="todo-list">
-                <h3 class="slogan">代辦清單</h3>
-                <ul id="pending-item">
-                    <li v-for="(item, itemIndex) in pending">
-                        <input type="checkbox">
-                        <label for="">{{ item }}</label>
-                    </li>
-                </ul>
+    <div id="app" v-cloak>
+        <div class="container">
+            <h1 class="slogan">Todo list</h1>
+            <div class="join">
+                <label for="item-name">代辦項目</label>
+                <input type="text" id="item-name" v-model="itemValue" ref="itemValue" @keyup.enter="doAddItem">
+                <button id="add-btn" @click="doAddItem">加入</button>
             </div>
-            <div class="done">
-                <h3 class="slogan">完成清單</h3>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="item-check-4">
-                        <label for="item-check-4">yellow</label>
-                    </li>
-                    <li>
-                       <input type="checkbox" id="item-check-5">
-                        <label for="item-check-5">blacl</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item-check-6">
-                        <label for="item-check-6">red</label>
-                    </li>
-                </ul>
+            <div class="check">
+                <div class="todo-list">
+                    <h3 class="slogan">代辦清單</h3>
+                    <ul id="pending-item">
+                        <li v-for="(item, itemIndex) in pending" @click="toDone(itemIndex)">
+                            <label for="">{{ item }}</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="done">
+                    <h3 class="slogan">完成清單</h3>
+                    <ul>
+                        <li v-for="(item, itemIndex) in done" @click="toPending(itemIndex)">
+                            <label for="">{{ item }}</label>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-            
-        </div>
-        <div >
-            <button  class="save-btn-1" id="save-btn">save</button>
+            <div>
+                <button class="save-btn-1" id="save-btn">save</button>
+            </div>
         </div>
     </div>
-</div>
 </body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/todo_vue.js"></script>
+
 </html>
