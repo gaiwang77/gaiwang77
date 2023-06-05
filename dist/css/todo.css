@@ -75,7 +75,7 @@ ul {
   flex-wrap: wrap;
 }
 .check > div {
-  border: 1px solid #505050;
+  border: 1px solid #949494;
   padding: 15px;
   width: calc(50% - 10px);
 }
