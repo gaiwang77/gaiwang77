@@ -81,6 +81,9 @@ ul {
   background-color: #e2ebe4;
 }
 
+.todo-list {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .todo-list input[type=checkbox]:checked ~ label {
   text-decoration: line-through;
 }
@@ -147,6 +150,9 @@ ul {
   background-color: rgb(190, 113, 62);
 }
 
+.done {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .done > ul li {
   padding: 10px;
   background: #31dfab;
