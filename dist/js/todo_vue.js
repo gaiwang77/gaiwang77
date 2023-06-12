@@ -64,10 +64,17 @@ let vm = Vue.createApp({
             database.set('todo-done', this.done);
            
         },
-        doRemove(index){
-            console.log(index);
+        doSaveCloud(){
+            swal.fire({
+                title:'儲存到雲端',
+                text:'請輸入UID',
+                input:'text',
+                showCancelButton: true,
+                showCancelButtonText:'先不要',
+                confirmButtonText: '確定',
+            })
         }
-
+        
     },
     mounted() {
         this.pending = database.get('todo-pending', []);

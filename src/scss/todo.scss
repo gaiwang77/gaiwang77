@@ -15,6 +15,32 @@
 
 }
 
+.cloud-funt {
+    display: flex;
+   
+    gap: 15px;
+    margin-left: 20px;
+    >button{
+        border: 0;
+        font-size: 18px;
+        padding: 10px 15px;
+        font-weight: 700;
+        cursor: pointer;
+        &.cloud-save{
+            background-color: #b481c4;
+            color: #fcfcfc;
+        }
+        &.cloud-load{
+            background-color: #eb874d;
+            color: #fcfcfc;
+        }
+        &:hover{
+            background-color: #cf4545;
+            color: #fcfcfc;
+        }
+    }
+}
+
 .join {
 
     position: relative;
@@ -87,18 +113,21 @@
     input[type="checkbox"]:checked~label {
         text-decoration: line-through;
     }
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
     >ul li {
 
         padding: 10px;
         padding-left: 20px;
         background-color: #fd5353;
-        border-radius: 25px;
+        border-radius: 30px;
         color: #ffffff;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 20px;
         font-weight: 600;
-       
+
         position: relative;
         margin-bottom: 8px;
         cursor: pointer;
@@ -106,6 +135,7 @@
         &:hover {
             background-color: #cf4545;
         }
+
         i {
             position: absolute;
             display: inline-flex;
@@ -120,13 +150,13 @@
             font-weight: 700;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             z-index: 2;
-        
+
             &:hover {
                 color: #cfcfcf;
 
             }
         }
-        
+
 
     }
 }
@@ -141,6 +171,7 @@
     margin-bottom: 10px;
     justify-content: center;
     margin-top: 20px;
+    border-radius: 25px;
 
 }
 
@@ -165,6 +196,7 @@
 
 .done {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
     >ul li {
 
         padding: 10px;
