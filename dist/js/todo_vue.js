@@ -11,7 +11,7 @@ const database = {
         }
         return def;
 
-        
+
     },
     remove(key) {
         localStorage.removeItem(key);
@@ -19,7 +19,7 @@ const database = {
 }
 
 let vm = Vue.createApp({
-    
+
     data() {
         return {
             pending: [],
@@ -45,13 +45,13 @@ let vm = Vue.createApp({
             this.pending.push(value);
             this.itemValue = '';
             this.$refs.itemValue.focus();
-            
+
         },
         toDone(index) {
-           let value = this.pending[index];
-           this.done.push(value);
-           this.pending.splice(index, 1);
-           this.update();
+            let value = this.pending[index];
+            this.done.push(value);
+            this.pending.splice(index, 1);
+            this.update();
         },
         toPending(index) {
             let value = this.done[index];
@@ -59,34 +59,102 @@ let vm = Vue.createApp({
             this.done.splice(index, 1);
             this.update();
         },
-        update () {
+        update() {
             database.set('todo-pending', this.pending);
             database.set('todo-done', this.done);
-           
-        },
-        doSaveCloud(){
-            swal.fire({
-                title:'儲存到雲端',
-                text:'請輸入UID',
-                input:'text',
-                showCancelButton: true,
-                cancelButtonText:'先不要',
-                confirmButtonText: '確定',
 
+        },
+        doRemove(index) {
+            console.log(index);
+        },
+        doSaveCloud() {
+            Swal.fire({
+                title: '儲存到雲端',
+                text: '請輸入 UID',
+                input: 'text',
+                showCancelButton: true,
+                confirmButtonText: '儲存',
+                cancelButtonText: '先不要'
             }).then(response => {
-                let params = {
-                    action:'todo',
-                    uid:response.value,
-                    data:{
-                        pending:this.pendin,
-                        done: this.done,
+                if (response.value) {
+                    let api = 'https://book.niceinfos.com/frontend/api/';
+
+                    // 使用表單物件
+                    // let form = new FormData;
+                    // form.append('action', 'todo');
+                    // form.append('uid', response.value);
+                    // form.append('data', {
+                    //     pending: this.pending,
+                    //     done: this.done
+                    // });
+
+                    let params = {
+                        action: 'todo',
+                        uid: response.value,
+                        data: {
+                            pending: this.pending,
+                            done: this.done
+                        }
                     }
 
+                    fetch(api, {
+                        method: 'POST',
+                        body: JSON.stringify(params)
+                    }).then(response => {
+                        return response.text();
+                    }).then(text => {
+                        setTimeout(() => {
+                            let data = JSON.parse(text);
+                            console.log(data);
+                            Swal.fire({
+                                title: '儲存完畢',
+                                text: '資料已儲存',
+                                icon: 'success'
+                            })
+                        }, 1000);
+                    })
+
+                    Swal.fire({
+                        title: '資料儲存中',
+                        text: '請勿關閉或重新整理視窗',
+                        showConfirmButton: false
+                    })
                 }
-                console.log(params);
-            })
+            });
         },
-        doSaveLoad(){}
+        async doSaveLoad() {
+            let response = await Swal.fire({
+                title: '載入雲端資料',
+                text: '請輸入 UID',
+                input: 'text'
+            });
+
+            if (response.value) {
+                let api = 'https://book.niceinfos.com/frontend/api/';
+                fetch(`${api}?action=todo&uid=${response.uid}`).then(response => {
+                    return response.text();
+                }).then(text => {
+                    console.log(text);
+                })
+            }
+            if (response.value) {
+                let api = 'https://book.niceinfos.com/frontend/api/';
+                fetch(`${api}?action=todo&uid=${response.value}`).then(response => {
+                    return response.text();
+                }).then(text => {
+                    let response = JSON.parse(text);
+                    if (response.data.pending) {
+                        this.pending = response.data.pending;
+                    }
+
+                    if (response.data.done) {
+                        this.done = response.data.done;
+                    }
+
+                    this.update();
+                })
+            }
+        }
         
     },
     mounted() {
