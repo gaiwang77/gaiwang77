@@ -70,10 +70,23 @@ let vm = Vue.createApp({
                 text:'請輸入UID',
                 input:'text',
                 showCancelButton: true,
-                showCancelButtonText:'先不要',
+                cancelButtonText:'先不要',
                 confirmButtonText: '確定',
+
+            }).then(response => {
+                let params = {
+                    action:'todo',
+                    uid:response.value,
+                    data:{
+                        pending:this.pendin,
+                        done: this.done,
+                    }
+
+                }
+                console.log(params);
             })
-        }
+        },
+        doSaveLoad(){}
         
     },
     mounted() {

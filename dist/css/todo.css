@@ -34,6 +34,7 @@ ul {
   margin-left: 20px;
 }
 .cloud-funt > button {
+  border-radius: 12px;
   border: 0;
   font-size: 18px;
   padding: 10px 15px;
