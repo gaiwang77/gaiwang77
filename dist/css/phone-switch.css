@@ -1,0 +1,11 @@
+@media screen and (max-width: 815px) {
+  .header {
+    background-color: #c43434;
+  }
+  .header .header-menu {
+    display: none;
+  }
+  .header .lang {
+    display: none;
+  }
+}/*# sourceMappingURL=phone-switch.css.map */
