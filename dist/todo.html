@@ -13,6 +13,10 @@
     <div id="app" v-cloak>
         <div class="container">
             <h1 class="slogan">Todo list</h1>
+            <div class="cloud-funt">
+                <button class="cloud-save" @click="doSaveCloud">雲端儲存</button>
+                <button class="cloud-load" @click="doSaveLoad">雲端載入</button>
+            </div>
             <div class="join">
                 <label for="item-name">代辦項目</label>
                 <input type="text" id="item-name" v-model="itemValue" ref="itemValue" @keyup.enter="doAddItem">

@@ -28,6 +28,32 @@ ul {
   height: 100%;
 }
 
+.cloud-funt {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+.cloud-funt > button {
+  border-radius: 12px;
+  border: 0;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cloud-funt > button.cloud-save {
+  background-color: #b481c4;
+  color: #fcfcfc;
+}
+.cloud-funt > button.cloud-load {
+  background-color: #eb874d;
+  color: #fcfcfc;
+}
+.cloud-funt > button:hover {
+  background-color: #cf4545;
+  color: #fcfcfc;
+}
+
 .join {
   position: relative;
   display: flex;
@@ -91,7 +117,7 @@ ul {
   padding: 10px;
   padding-left: 20px;
   background-color: #fd5353;
-  border-radius: 25px;
+  border-radius: 30px;
   color: #ffffff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
@@ -130,6 +156,7 @@ ul {
   margin-bottom: 10px;
   justify-content: center;
   margin-top: 20px;
+  border-radius: 25px;
 }
 
 .save-btn-1 {

@@ -1,0 +1,38 @@
+@media screen and (max-width: 815px) {
+  .header .header-logo {
+    flex: 1;
+  }
+  .header .header-menu {
+    display: none;
+  }
+  .header .lang {
+    display: none;
+  }
+  .header .header-mobile-switch {
+    display: flex;
+  }
+  #header-mobile-switch-box:checked ~ .header-mobile-switch {
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 15px;
+  }
+  #header-mobile-switch-box:checked ~ .header-mobile-switch > span {
+    width: 100%;
+    height: 4px;
+    background: rgb(14, 14, 14);
+  }
+  #header-mobile-switch-box:checked ~ .header-mobile-switch > span:first-child {
+    transform: rotate(45deg);
+    top: 5px;
+  }
+  #header-mobile-switch-box:checked ~ .header-mobile-switch > span:nth-child(2) {
+    display: none;
+    transition: none;
+  }
+  #header-mobile-switch-box:checked ~ .header-mobile-switch > span:last-child {
+    transform: rotate(-45deg);
+    top: -5px;
+  }
+}/*# sourceMappingURL=phone-switch.css.map */
