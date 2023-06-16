@@ -50,13 +50,13 @@ color: rgb(62, 162, 255);
     background-color: #ebebeb;
     padding: 15px;
     max-width: 100%;
-    padding-top: 30px;
+    /* padding-top: 30px; */
 }
 .list-title .title-cag{
 color: #971d25;
 padding-left: 15px;
 font-size: 25px;
-margin-top: px;
+margin-top: 15px;
 
 }
 .title-collapse-list{
