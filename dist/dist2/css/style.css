@@ -296,9 +296,7 @@ body a {
     }
 
     
-    .list-title p{
-        /* text-align: start; */
-    }
+
     
 
     .product-top {
@@ -420,9 +418,6 @@ body a {
 
 
 
-.index-subtitle {
-    /****/
-}
 
 .index-tiitle {
     font-weight: 700;
@@ -460,10 +455,6 @@ body a {
     width: 100%;
 }
 
-.index-area-1
-/** index-area-2 **/
-
-.index-area-2 {}
 
 /** jimmy修改 **/
 .index-list-item img:hover {
@@ -523,7 +514,6 @@ body a {
 
 
 }
-<<<<<<< HEAD
 .index-company-img{
     position: relative;
 }
@@ -537,25 +527,14 @@ body a {
     height:328.5px;
     max-width: 100%;
     max-height:100%;
-=======
-
-.index-brand-img .cover {
-    position: absolute;
-    width: 393.52px;
-    height: 292.46px;
->>>>>>> 403f2adcf77d07df575065d36b8d78deb56a790b
     opacity: 0;
     background-color: rgba(145, 23, 23, 0.753);
     cursor: pointer;
 
 }
 
-<<<<<<< HEAD
 
 .index-company-img .cover .cover-text {
-=======
-.cover-text {
->>>>>>> 403f2adcf77d07df575065d36b8d78deb56a790b
     color: #fff;
     align-items: center;
     justify-content: center;

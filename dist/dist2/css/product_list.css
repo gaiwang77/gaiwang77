@@ -22,8 +22,11 @@ ul {
 .breadcrumb-item a{
     text-decoration: none;
     color:#6c757d;
-    padding-left: 20px;
+   
 
+}
+.breadcrumb-item:first-child{
+    padding-left: 20px;
 }
 .breadcrumb-item a:hover{
 color: rgb(62, 162, 255);
@@ -31,6 +34,7 @@ color: rgb(62, 162, 255);
 }
 .breadcrumb-item{
     font-weight: 700;
+    font-size: 15px;
 }
 /* 左側列表 */
 .products-list-nav nav{
@@ -41,19 +45,46 @@ color: rgb(62, 162, 255);
 .list-title{
     font-weight: 800;
     list-style: none;
-    color: #971d25;
-    font-size: 25px;
-    background-color: #e7e5e5;
-    padding: 30px;
+    /* color: #000000; */
+    /* font-size: 25px; */
+    background-color: #ebebeb;
+    padding: 15px;
     max-width: 100%;
+    padding-top: 30px;
 }
 .list-title .title-cag{
 color: #971d25;
-padding-left: 30px;
+padding-left: 15px;
 font-size: 25px;
+margin-top: px;
 
 }
-.list-title a{
+.title-collapse-list{
+    padding-left: 15px;
+ 
+}
+.title-collapse-list hr{
+    margin-right: 15px;
+    margin-bottom: 30px;
+
+}
+.accordion-list ul{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.accordion-list ul li{
+    padding-top: 10px;
+    
+}
+.accordion-list a{
+    font-size: 16px;   
+    color: #292929;
+}
+.accordion-list-item{
+    
+    margin-bottom: 15px;
+}
+.accordion-list button{
     font-size: 18px;
     font-weight: 700;
     color:#1f1e1e
@@ -66,6 +97,7 @@ font-size: 25px;
     color:#696868
 
 }
+
 /* 右側 */
 .product-express{
     max-width: 100%;
