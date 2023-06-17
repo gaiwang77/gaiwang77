@@ -45,8 +45,7 @@
 .index-area-2 p,
 .index-area-3 p,
 .index-area-4 p,
-.index-area-products p,
-.index-area-products-list p {
+.index-area-products p{
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -69,55 +68,39 @@
     font-size: 48px;
 }
 
-.index-area-title h2 {
-    position: relative;
+.index-area-title h2{
+    position:relative;
     font-size: 40px;
 }
-
-.index-area-title h2::before {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, #ae494f 5%, #f00 100%);
-    position: absolute;
-    right: 0;
-    bottom: -8px;
-    animation: Go2 3.5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
+.index-area-title h2::before{
+  content:"";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right,#ae494f 5%,#f00 100%);
+  position:absolute;
+  right: 0;
+  bottom: -8px;
+  animation: Go2 3.5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
 }
-
-.index-area-title h2::after {
-    content: "";
-    width: 0%;
-    height: 4px;
-    background: linear-gradient(to left, #ae494f 5%, #f00 100%);
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    animation: Go 3.5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
+.index-area-title h2::after{
+  content:"";
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(to left,#ae494f 5%,#f00 100%);
+  position:absolute;
+  left: 0;
+  bottom: -8px;
+  animation: Go 3.5s infinite alternate cubic-bezier(0.57, 0.35, 0.45, 0.69);
 }
+ @keyframes Go{ 100%{  width: 100%;};}
+ @keyframes Go2{ 100%{  width: 0%;};}
 
-@keyframes Go {
-    100% {
-        width: 100%;
-    }
-
-    ;
-}
-
-@keyframes Go2 {
-    100% {
-        width: 0%;
-    }
-
-    ;
-}
-
-body a {
+body a{
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
-.footer-area a:hover {
+.footer-area a:hover{
     color: #b9b6b6;
 }
 
@@ -128,7 +111,7 @@ body a {
     padding-bottom: 105px;
 }
 
-.services-items {
+.services-items{
     padding-top: 40px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -136,11 +119,11 @@ body a {
 }
 
 
-.services-items h2 {
+.services-items h2{
     font-size: 20px;
 }
 
-.services-items .item {
+.services-items .item{
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 15px;
@@ -229,55 +212,53 @@ body a {
     margin: auto 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     .sub-navbar-r img {
-        margin: 0px 0px 0px 0px;
-        padding: 0px;
-    }
-
-    .main-nav-item ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+    
+    .main-nav-item ul{
         width: 100%;
     }
-
-    .main-nav-item ul li {
+    
+    .main-nav-item ul li{
         float: left;
     }
-
-    .sub-nav-item a {
+    
+    .sub-nav-item a{
         font-size: 15px;
-        margin: 0px !important;
-        padding: 0px !important;
+        margin: 0px!important;
+        padding: 0px!important;
     }
-
-    .sub-nav-item i {
+    
+    .sub-nav-item i{
         font-size: 15px;
     }
-
-    .xsnavicon {
+    
+    .xsnavicon{
         float: right;
         font-size: 30px;
         color: #fff;
         margin-right: 30px;
     }
-
-    .xsmainnavicon {
-        float: none !important;
+    
+    .xsmainnavicon{
+        float: none!important;
     }
-
-    .xsmainnavicon-list {
+    
+    .xsmainnavicon-list{
         float: none;
         width: 100%;
     }
-
-    .xsmainnavicon-list .main-nav-item {
+    
+    .xsmainnavicon-list .main-nav-item{
         width: 20%;
         padding-top: 15px;
         text-align: center;
         padding-left: 10%;
         padding-right: 10%;
     }
-   
-
     .list-title {
         max-width: 100%;
         padding: 15px;
@@ -295,26 +276,22 @@ body a {
         
     }
 
-
-    
-
-    
-
-    .product-top {
+ .product-top {
         position: relative;
         margin-bottom:70px;
         display: flex;
     }
+    
 }
 
-@media (min-width: 768px) {
-    .md-none {
+@media (min-width: 768px){
+    .md-none{
         display: none;
     }
 }
 
-@media (max-width: 768px) {
-    .xs-none {
+@media (max-width: 768px){
+    .xs-none{
         display: none;
     }
 }
@@ -324,68 +301,72 @@ body a {
 
 /****  下拉選單 ****/
 .slide-items-2 {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .slide-items-2 img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
-.side {
-    background-color: #ad494f !important;
+.side{
+    background-color: #ad494f!important;
 }
 
-.side-menu {
-    margin-top: 1px !important;
+.side-menu{
+    margin-top: 1px!important;
 }
 
 
 
-.side-text .side-text-item {
+.side-text .side-text-item{
     color: #fff;
 }
 
-.side-text-item h2 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 30px;
+.side-text-item h2{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
     margin-left: 0;
     margin-right: 0;
     font-weight: 700;
+    border-bottom: #fff solid 2px;
+ 
 }
 
-.side-text-item ul {
+.side-text-item ul{
     list-style: none;
     padding: 0;
 }
 
-.side-text-item ul li {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.side-text-item ul li{
+    text-align: left;
+    line-height: 18px;
+    margin-bottom: 10px;
 }
 
-.side-text-item ul li a {
-    font-size: 20px;
+.side-text-item ul li a{
+    font-size: 15px;
     font-weight: 100;
-    text-align: center;
+    line-height: 20px;
+    line-height: 18px;
 }
 
-.side-text-list {
+.side-text-list{
     padding-top: 50px;
 }
 
-.side-text-line {
-    margin-top: 30px;
-    margin-bottom: 5px;
+.side-text-line{
+    margin-top: -5px;
+    margin-bottom: -5px;
 }
 
-.side-text-icon ul {
+.side-text-icon ul{
     list-style: none;
 }
 
-.side-text-icon ul li {
+.side-text-icon ul li{
     float: left;
     margin-left: 7px;
     margin-right: 7px;
@@ -420,6 +401,7 @@ body a {
 
 
 
+
 .index-tiitle {
     font-weight: 700;
     text-align: left;
@@ -444,9 +426,25 @@ body a {
     color: #fff;
     padding: 10px 60px;
     text-decoration: none;
-    font-size: 20px;
     transition: 0.5s;
 }
+
+.btn-red-2 {
+    background-color: #991C23;
+    color: #fff;
+    padding: 5px 25px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.btn-red-2:hover {
+    background-color: #611a1e;
+    color: #fff;
+    padding: 5px 25px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
 
 .index-tiitle-img {
     padding-top: 100px;
@@ -456,9 +454,14 @@ body a {
     width: 100%;
 }
 
+.index-area-1
+
+/** index-area-2 **/
+
+.index-area-2 {}
 
 /** jimmy修改 **/
-.index-list-item img:hover {
+.index-list-item img:hover{
     filter: invert(32%) sepia(83%) saturate(739%) hue-rotate(316deg) brightness(55%) contrast(330%);
 }
 
@@ -480,6 +483,14 @@ body a {
     opacity: 1;
 }
 
+.hr-3 {
+    color: #991c23;
+    border-bottom: 2px solid;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
 /** index-area-3 **/
 .index-area-3 {
     background-image: url("../images/index-area-3-bg.jpg");
@@ -488,7 +499,6 @@ body a {
     position: relative;
     margin-top: 0px;
 }
-
 .index-list-item-1 {
     text-align: center;
     cursor: pointer;
@@ -511,31 +521,22 @@ body a {
 
 .index-brand-img img {
     width: 100%;
- 
+
 
 
 }
-.index-company-img{
-    position: relative;
-}
 
-
-.index-company-img .cover {
+.index-brand-img .cover {
     position: absolute;
-    /* width: 344px;
-    height:256.19px; */
-    width: 442px;
-    height:328.5px;
-    max-width: 100%;
-    max-height:100%;
+    width: 393.52px;
+    height:292.46px;
     opacity: 0;
     background-color: rgba(145, 23, 23, 0.753);
     cursor: pointer;
 
 }
 
-
-.index-company-img .cover .cover-text {
+.cover-text {
     color: #fff;
     align-items: center;
     justify-content: center;
@@ -549,27 +550,404 @@ body a {
 .index-brand-img .cover:hover {
     transition: all 0.5s;
     max-width: 100%;
-    max-height: 100%;
+    max-height:100%;
     opacity: 1;
 }
 
-@media (min-width: 768px) and (max-width: 1400px) {
-    .index-brand-img .cover:hover {
-        transition: all 0.5s;
-        max-width: 336px;
-        max-height: 250px;
-        opacity: 1;
+@media (min-width: 768px) and (max-width: 1400px){
+   .index-brand-img .cover:hover {
+    transition: all 0.5s;
+    max-width: 336px;
+    max-height: 250px;
+    opacity: 1;
+} 
+}
+
+
+
+/**product list**/
+/* 預設樣式 */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+/* 麵包塊 */
+.breadcrumb-item a{
+    text-decoration: none;
+    color:#6c757d;
+   
+
+}
+.breadcrumb-item:first-child{
+    padding-left: 20px;
+}
+.breadcrumb-item a:hover{
+color: rgb(62, 162, 255);
+
+}
+.breadcrumb-item{
+    font-weight: 700;
+    font-size: 15px;
+}
+.list-title{
+    font-weight: 800;
+    /* list-style: none; */
+    background-color: #ebebeb;
+    padding: 10px;
+    padding-top: 30px;
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+.list-title .title-cag{
+color: #971d25;
+padding-left: 35px;
+font-size: 25px;
+margin-top: 15px;
+
+}
+.list-title ul li:last-child{
+    margin-bottom: 20px;
+}
+
+.title-collapse-list{
+    padding-left: 15px;
+ 
+}
+.title-collapse-list hr{
+    margin-right: 15px;
+    margin-bottom: 30px;
+
+}
+.accordion-list ul{
+   
+    padding-left: 10px;
+}
+
+.accordion-list a{
+    font-size: 14px;   
+    color: #bd7d7d;
+    padding: 10px;
+}
+.accordion-list li:hover{
+    background-color: #b8a88b86;
+}
+.accordion-list a:hover{
+    color:#696868;
+   
+    
+}
+.accordion-list button i{
+    font-size: 10px;
+    padding-right: 5px;
+
+
+}
+
+.accordion-list button{
+    font-size: 18px;
+    font-weight: 700;
+    color:#1f1e1e;
+    padding: 10px;
+}
+.accordion-list button:hover{
+ 
+    background-color:#b8a88b86;
+}
+
+/* 右側 */
+.product-express{
+    max-width: 100%;
+ 
+}
+.product-express-title{
+    max-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.product-top{
+    display: flex;
+    justify-content: space-between;
+}
+.product-top img{
+    max-width: 100%;
+    height: 200px;
+}
+.product-top div{
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+/* 下拉選單 */
+.dropdown-control{
+    display: flex;
+    gap: 15px;
+    border: 0;
+    position: relative;    
+    justify-content: end;
+    margin-top: 30px;
+  }
+.dropdown{
+    align-items: end;
+    border-bottom: 3px solid #1d1d1d;
+}
+/* 產品文字 */
+.product-item-text{
+    color: #971d25;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.product-item-text2{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    
+}
+/* 分頁 */
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.pagination .page-item1{
+    border: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.page-link-1{
+    color: #1d1d1d;
+    text-decoration: none;
+}
+.page-link-1:hover{
+    color:#a11919;
+}
+.page-item1:hover{
+   border: #a11919 1px solid; 
+   border-radius: 15px;
+}
+/**** index-area-products ****/
+.index-area-products {
+    background: -webkit-linear-gradient(#ffffff,#e8bbbe);
+    background: -o-linear-gradient(#ffffff,#e8bbbe);
+    background: -moz-linear-gradient(#ffffff,#e8bbbe);
+    background: linear-gradient(#ffffff,#e8bbbe);
+    position: relative;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.index-area-products-list{
+    margin-top: 30px;
+}
+
+.index-area-products-bg1 img{
+    position: absolute;
+    right: 0;
+}
+
+.index-area-products .index-area-products-list img{
+    z-index: 99;
+}
+
+
+@media (max-width: 768px){
+    .index-area-products .btn-red{
+        text-align: center;
+        margin-top: 0;
+        margin-left: 120px;
+    }
+    
+    .index-area-products-list{
+        margin-bottom: 0px;
+        padding-bottom: 60px;
+        margin-top: 10px!important;
+    }
+    
+    .index-area-products-list .btn-red{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .index-area-products-list p{
+        margin-bottom: 30px!important;
+    }
+    
+    .index-area-products{
+        margin-bottom: 0!important;
     }
 }
+/**** index-area-products end****/
+/**** 產品訂購頁面 ****/
+
+.order-area{
+    padding-bottom: 40px;
+}
+
+.order-area .order-slide{
+    padding: 20px 40px;
+    /*background-color: #000;*/
+    margin-top: 10px;
+}
+
+.order-info{
+    margin-top: 10px;
+    padding-top: 7%;
+}
+
+.order-area .order-title h2{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+} 
+
+.order-area .order-price{
+    font-size: 24px!important;
+    color: #991C23;
+}
+
+.qty {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    border: 0;
+    border-top: 1px solid #991c23;
+    border-bottom: 1px solid #991c23;
+}
+
+.count{
+    margin-bottom: 30px;
+}
+
+input.qtyplus {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #991c23;
+    background: #f8f8f8;
+}
+
+input.qtyminus {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #991c23;
+    background: #f8f8f8;
+}
+
+.order-btn-01{
+    margin-top: 20px;
+    margin-left: 25%;
+}
+
+.order-btn-01 a{
+    color: #991C23;
+    background-color: #fff;
+    border: #991C23 solid 2px;
+    text-align: center;
+    padding: 10px 36px;
+}
+
+.order-btn-01 a:hover{
+    color: #fff;
+    background-color: #991C23;
+    border: #991C23 solid 2px;
+    text-align: center;
+    padding: 10px 36px;
+    transition: 0.3s;
+}
+
+.order-btn-02{
+    margin-top: 20px;
+    margin-right: 25%;
+}
+
+.order-btn-02 a{
+    color: #fff;
+    background-color: #991C23;
+    border: #991C23 solid 2px;
+    text-align: center;
+    padding: 10px 36px;
+}
+
+.order-btn-02 a:hover{
+    color: #991C23;
+    background-color: #CBCBCB;
+    border: #991C23 solid 2px;
+    text-align: center;
+    padding: 10px 36px;
+    transition: 0.3s;
+}
+
+.order-area h2{
+    font-size: 26px;
+    font-weight: 700;
+    color: #991c23;
+}
+
+.order-price{
+    margin-top: 0;
+    margin-bottom: 75px;
+}
+
+.order-slide .slide-btn{
+    background-color: #333;
+}
+
+
+@media (max-width: 768px){
+    .order-slide{
+        margin-top: 0px;
+    }
+    
+    .order-btn-01{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .order-btn-02{
+        padding: 0;
+        margin-top: 40px;
+        margin-bottom: 55px;
+    }
+    
+    .order-img{
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    
+}
+/**** 產品訂購頁面 end ****/
 
 
 
 /** footer **/
-.footer-white-p1 {
+.footer-white-p1{
     float: left;
 }
 
-.footer-white-p2 {
+.footer-white-p2{
     float: right;
 }
 
@@ -607,8 +985,7 @@ body a {
     text-decoration: none;
 
 }
-
-.footer-area ul li a:hover {
+.footer-area ul li a:hover{
     color: #bdbbbb;
 }
 
@@ -618,149 +995,91 @@ body a {
 
 
 /** max-width: 768px **/
-@media (max-width: 768px) {
-    .index-list-item {
+@media (max-width: 768px){
+    .index-list-item{
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
-    body p {
-        font-size: 18px !important;
+    
+    body p{
+        font-size: 18px!important;
     }
-
-    .hr-1 {
-        margin-top: 20px !important;
+    
+    .hr-1{
+        margin-top: 20px!important;
         margin-bottom: 15px;
         width: 40%;
         text-align: center;
         margin-left: 30%;
         margin-right: 30%;
     }
-
-    .index-subtitle {
-        margin-top: 0px !important;
+    
+    .index-subtitle{
+        margin-top: 0px!important;
     }
-
-    .index-tiitle {
-        margin-top: 0px !important;
-        margin-bottom: 15px !important;
+    
+    .index-tiitle{
+        margin-top: 0px!important;
+        margin-bottom: 15px!important;
         font-size: 34px;
-        
     }
-
-    .xl-none {
+    
+    .xl-none{
         display: none;
     }
-
-    .index-area-3 .btn-red {
+    
+    .index-area-3 .btn-red{
         text-align: center;
         margin-top: 0;
         margin-left: 120px;
     }
-
-    .index-area-title {
+    
+    .index-area-title{
         padding-left: 35%;
         padding-right: 35%;
         text-align: center;
     }
-
-    .index-subtitle {
+    
+    .index-subtitle{
         font-size: 24px;
         font-weight: 700;
     }
-
-    .index-area-title h2 {
+    
+    .index-area-title h2{
         font-size: 30px;
         text-align: center;
     }
-
-    .index-brand-item {
+    
+    .index-brand-item{
         padding: 0 100px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
-
+    
     .index-brand-img .cover {
-        width: 283px;
-        height: 210px;
-    }
-
-    .index-brand-img .cover:hover {
-        width: 283px;
-        height: 210px;
-    }
-
-    .footer-white-p1 {
-        float: none;
-    }
-
-    .footer-white-p2 {
-        float: none;
-    }
-
-    .footer-icon-group {
-        margin-top: 15px !important;
+    width: 283px;
+    height:210px;
+}
+    .index-brand-img .cover:hover{
+    width: 283px;
+    height:210px;
+}
+    
+    .footer-white-p1{
+    float: none;
+}
+    
+    .footer-white-p2{
+    float: none;
+}
+    
+    .footer-icon-group{
+        margin-top: 15px!important;
         margin-bottom: 15px;
-        padding-top: 0px !important;
+        padding-top: 0px!important;
         padding-left: 0px;
         padding-right: 0px;
     }
-
+    
 }
 
-
-/**** index-area-products ****/
-.index-area-products {
-    background: -webkit-linear-gradient(#ffffff, #e8bbbe);
-    background: -o-linear-gradient(#ffffff, #e8bbbe);
-    background: -moz-linear-gradient(#ffffff, #e8bbbe);
-    background: linear-gradient(#ffffff, #e8bbbe);
-    position: relative;
-    margin-top: 0px;
-    padding-top: 30px;
-}
-
-.index-area-products-list {
-    margin-top: 30px;
-}
-
-.index-area-products-bg1 img {
-    position: absolute;
-    right: 0;
-}
-
-.index-area-products .index-area-products-list img {
-    z-index: 99;
-}
-
-
-@media (max-width: 768px) {
-    .index-area-products .btn-red {
-        text-align: center;
-        margin-top: 0;
-        margin-left: 120px;
-    }
-
-    .index-area-products-list {
-        margin-bottom: 0px;
-        padding-bottom: 60px;
-        margin-top: 10px !important;
-    }
-
-    .index-area-products-list .btn-red {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .index-area-products-list p {
-        margin-bottom: 30px !important;
-    }
-
-    .index-area-products {
-        margin-bottom: 0 !important;
-    }
-
-
-}
-
-/**** index-area-products end****/
