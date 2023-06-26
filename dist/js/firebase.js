@@ -1,12 +1,11 @@
 const firebaseConfig = {
-
-    apiKey: "AIzaSyDgvqX_e8a8PzKkGUv5nUDdYpDIO_IyVqU",
-    authDomain: "f20230626-aa6d7.firebaseapp.com",
-    databaseURL: "https://f20230626-aa6d7-default-rtdb.firebaseio.com",
-    projectId: "f20230626-aa6d7",
-    storageBucket: "f20230626-aa6d7.appspot.com",
-    messagingSenderId: "807237881982",
-    appId: "1:807237881982:web:0d210b7320712b329cc82f"
+    apiKey: "AIzaSyD5OgGBF1gF1qC_uzPHBeP353q50FoiOj0",
+    authDomain: "f20230626.firebaseapp.com",
+    databaseURL: "https://f20230626-default-rtdb.firebaseio.com",
+    projectId: "f20230626",
+    storageBucket: "f20230626.appspot.com",
+    messagingSenderId: "421448782268",
+    appId: "1:421448782268:web:454015a639972b2000dbb9"
 };
 
 const model = firebase.initializeApp(firebaseConfig, firebaseConfig.appId);
@@ -37,13 +36,13 @@ function listen(path, callback) {
 }
 
 ; (async () => {
-    let result = await write('BBB', 'test')
-    console.log(result)
+    // let result = await write('BBB', 'test')
+    // console.log(result)
 
-    let response = await read('test')
-    console.log(response)
+    // let response = await read('test')
+    // console.log(response)
 
-    listen('test', (value) => {
-        console.log(value)
-    })
+    // listen('test', (value) => {
+    //     console.log(value)
+    // })
 })()
