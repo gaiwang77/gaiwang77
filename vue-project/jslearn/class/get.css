@@ -1,0 +1,28 @@
+button {
+    font-size: 1rem;
+    border: 0;
+    padding: 0.25rem .75rem;
+    border-radius: .5rem;
+    margin-left: .25rem;
+    cursor: pointer;
+}
+
+.button_1st {
+    background-color: rgb(21, 218, 21);
+    margin-left: 1.75rem;
+}
+
+.button_2nd {
+    background-color: #fc5a5a;
+}
+
+input {
+    border: 0;
+    background-color: rgb(214, 214, 214);
+    padding: 1rem;
+}
+
+p {
+    border: 0.5px solid #777;
+    height: 50vh;
+}

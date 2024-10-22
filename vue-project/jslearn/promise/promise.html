@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        background-color: #0a0a0a;
+        color: aliceblue;
+    }
+</style>
+
+<body>
+
+    <h1>我的第一个 Web 页面</h1>
+    <p>我的第一个段落。</p>
+    <button onclick="myFunction()">点我</button>
+    <script>
+        // function startCounting() {
+        //     setTimeout(function() {
+        //         let i = 1;
+        //         const intervalId = setInterval(function() {
+        //             console.log(i);
+        //             i++;
+        //             if (i > 5) {
+        //                 clearInterval(intervalId);
+        //             }
+        //         }, 1000);  // 每秒輸出一個數字
+        //     }, 5000);  // 5 秒後開始
+        // }
+
+        // startCounting();
+        let a = 100;
+        function find() {
+            // 在 find 函式作用域中沒有變數 a，於是透過作用域鏈往父層尋找，
+            // 在這邊的父層是全域，也就找到了 a 變數
+            console.log(a); // 100
+        }
+        find();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <link rel="stylesheet" href="get.css">
+</head>
+
+<body>
+    <input type="text" class="intext">
+    <button class="button_1st">一級廢話</button>
+    <button class="button_2nd">二級廢話</button>
+    <p></p>
+    <script>
+        const input = document.querySelector('.intext'),
+            button_1st = document.querySelector('.button_1st'),
+            button_2nd = document.querySelector('.button_2nd'),
+            p = document.querySelector('p');
+
+        class Bullshit {
+            static welcome_tips() {
+                return '溫馨提醒:廢話嗎?'
+            }
+            static welcome() {
+                p.innerHTML = this.welcome_tips();
+            }
+            constructor(text, color) {
+                this.text = text;
+                this.color = color;
+            }
+            show() {
+                p.innerHTML = this.text + input.value;  // 改正這裡，確保 input 的值顯示出來
+                p.style.color = this.color;
+            }
+            set extra(value) {
+                this.value = value;
+                p.innerHTML += this.value;
+            }
+            get extra() {
+                return `這是廢話: ${this.text}, ${this.value}`;
+            }
+        }
+
+        class Sec_Bullshit extends Bullshit {
+            constructor(text, color, fontSize) {
+                super(text, color);
+                this.fontSize = fontSize;
+            }
+            show() {
+                p.innerHTML = this.text + input.value;  // 改正這裡，確保 input 的值顯示出來
+                p.style.color = this.color;
+                p.style.fontSize = this.fontSize;
+            }
+        }
+
+        button_1st.addEventListener('click', () => {
+            const bullshit = new Bullshit('我知道', '#00a1d6');
+            bullshit.show();
+            bullshit.extra = '7';
+            console.log(bullshit.extra);
+        });
+
+        button_2nd.addEventListener('click', () => {
+            const sec_bullshit = new Sec_Bullshit('你知道', '#000', '21px');
+            sec_bullshit.show();
+        });
+        p.addEventListener('click', () => {
+            Bullshit.welcome();
+        })
+    </script>
+</body>
+
+</html>
